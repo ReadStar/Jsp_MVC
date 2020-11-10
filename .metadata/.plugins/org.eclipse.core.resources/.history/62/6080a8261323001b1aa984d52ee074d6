@@ -1,0 +1,12 @@
+package svc;
+
+//Action 클래스로부터 요청받은 작업에 대한 데이터 등을 전달받아
+//Model(DAO 클래스)을 통해 실제 작업 처리를 요청하고
+//처리 결과를 리턴받아 해당 결과에 대한 판별을 통해
+//결과값으로 처리할 데이터를 리턴
+public class BoardWriteProService {
+	
+	//글 쓰기(등록) 요청을 처리하기 위한 registArticle()메서드 정의
+	//=>파라미터 : 게시물 정보(BoardBean)
+	//=>리턴타입 : 
+}

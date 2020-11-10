@@ -1,0 +1,20 @@
+Presentation Logic
+- 프로그램에서 사용자와의 상호작용을 위해 보여지는 부분의 코드
+- 주로 GUI 구현 등
+
+Business Logic
+- 프로그램 상에서 데이터베이스 등에 접근하여 데이터 처리 등의
+  실제 작업을 수행하는 코드
+
+
+DAO/DTO 패턴
+1. DAO(Data Access Object, 데이터 접근 객체)
+- 데이터베이스에 접근하여 데이터를 처리를 담당하는 객체
+  (DB 에 대한 INSERT, UPDATE, DELETE, SELECT 작업을 실제로 수행하는 코드들)
+- XXXDAO 클래스
+
+2. DTO(Data Transfer Object, 데이터 전송 객체)
+- Presentation Logic 과 Business Logic 사이에서 작업에 필요한 데이터를
+  저장하여 전송하는데 사용되는 객체
+- XXXDTO 또는 XXXBean 클래스 형태의 이름을 갖는다
+- 멤버변수, 생성자, Getter/Setter 메서드로 구성

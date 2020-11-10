@@ -1,0 +1,39 @@
+2020-11-02 16:19:56,252 [main] WARN  org.eclipse.jgit.util.FS - Exception caught during execution of command '[git, --version]' in '/usr/bin', return code '1', error message 'xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+'
+2020-11-02 16:20:01,281 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-03 12:05:56,966 [main] WARN  org.eclipse.jgit.util.FS - Exception caught during execution of command '[git, --version]' in '/usr/bin', return code '1', error message 'xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+'
+2020-11-03 12:06:03,809 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-11-03 12:07:07,532 [main] WARN  org.eclipse.jgit.util.FS - Exception caught during execution of command '[git, --version]' in '/usr/bin', return code '1', error message 'xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+'
+2020-11-03 12:07:14,503 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-03 12:33:34,219 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1593096ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-11-03 12:33:34,358 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.29.v20200521; built: 2020-05-27T11:26:53.365Z; git: 77c232aed8a45c818fd27232278d9f95a021095e; jvm 1.8.0_251-b08
+2020-11-03 12:33:34,376 [main] INFO  org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+2020-11-03 12:33:34,376 [main] INFO  org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+2020-11-03 12:33:34,377 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 600000ms
+2020-11-03 12:33:34,406 [main] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@294db5ee{/wse,null,AVAILABLE}
+2020-11-03 12:33:34,418 [main] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@7ed63dc8{HTTP/1.1, (http/1.1)}{0.0.0.0:60315}
+2020-11-03 12:33:34,418 [main] INFO  org.eclipse.jetty.server.Server - Started @1593297ms
+2020-11-03 12:33:34,418 [main] INFO  org.eclipse.jetty.server.session - node0 Scavenging every 660000ms
+2020-11-04 08:44:05,759 [Framework stop - Equinox Container: 74910bcc-e5a5-4040-b54a-57acc9ab5d75] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@7ed63dc8{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+2020-11-04 08:44:05,759 [Framework stop - Equinox Container: 74910bcc-e5a5-4040-b54a-57acc9ab5d75] INFO  org.eclipse.jetty.server.session - node0 Stopped scavenging
+2020-11-04 08:44:05,772 [Framework stop - Equinox Container: 74910bcc-e5a5-4040-b54a-57acc9ab5d75] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@294db5ee{/wse,null,UNAVAILABLE}
+2020-11-05 10:05:25,666 [main] WARN  org.eclipse.jgit.util.FS - Exception caught during execution of command '[git, --version]' in '/usr/bin', return code '1', error message 'xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+'
+2020-11-05 10:05:33,898 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-11-06 13:52:01,195 [main] WARN  org.eclipse.jgit.util.FS - Exception caught during execution of command '[git, --version]' in '/usr/bin', return code '1', error message 'xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+'
+2020-11-06 13:52:08,544 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-11-06 14:35:38,226 [main] WARN  org.eclipse.jgit.util.FS - Exception caught during execution of command '[git, --version]' in '/usr/bin', return code '1', error message 'xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+'
+2020-11-06 14:35:44,795 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-06 15:31:42,205 [main] WARN  org.eclipse.jgit.util.FS - Exception caught during execution of command '[git, --version]' in '/usr/bin', return code '1', error message 'xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+'
+2020-11-06 15:31:49,650 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-06 15:57:01,840 [main] WARN  org.eclipse.jgit.util.FS - Exception caught during execution of command '[git, --version]' in '/usr/bin', return code '1', error message 'xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+'
+2020-11-06 15:57:08,170 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-11-10 09:01:21,204 [main] WARN  org.eclipse.jgit.util.FS - Exception caught during execution of command '[git, --version]' in '/usr/bin', return code '1', error message 'xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+'
+2020-11-10 09:01:28,180 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

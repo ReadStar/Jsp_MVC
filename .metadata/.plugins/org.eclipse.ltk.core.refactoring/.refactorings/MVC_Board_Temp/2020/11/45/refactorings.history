@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;action.BoardWritePro&apos; to &apos;BoardWriteProAction&apos;&#x0A;- Original project: &apos;MVC_Board&apos;&#x0A;- Original element: &apos;action.BoardWritePro&apos;&#x0A;- Renamed element: &apos;action.BoardWriteProAction&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;BoardWritePro&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;action{BoardWritePro.java[BoardWritePro" matchStrategy="1" name="BoardWriteProAction" qualified="false" references="true" similarDeclarations="false" stamp="1604647871877" textual="false" version="1.0"/>
+</session>

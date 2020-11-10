@@ -1,0 +1,17 @@
+package vo;
+
+import java.sql.Date;
+
+public class BoardBean {
+	private int board_num;
+	private String board_name;
+	private String board_pass;
+	private String board_subject;
+	private String board_content;
+	private String board_file;
+	private int board_re_ref;
+	private int board_re_lev;
+	private int board_re_seq;
+	private int board_readcount;
+	private Date board_date;
+}

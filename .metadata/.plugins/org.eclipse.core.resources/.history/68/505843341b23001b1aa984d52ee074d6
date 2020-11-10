@@ -1,0 +1,50 @@
+package db;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+
+//DB관련 기본 기능(연결, 자원반환, commit, rollback 등)을 담당하는 클래스
+//=>모든 메서드는 JdbcUtil 클래스의 인스턴스 생성 없이도 접근하도록
+//		static 메서드ㅐ로 정의
+public class JdbcUtil {
+	//1. DBCP를 활용한 Connection 객체를 가져오는 getConnection() 메서드 정의
+	//=>파라미터 : 없음, 리턴타입 : Connection
+	public static Connection getConnection() {
+		Connection con = null; //생성된 Connection 객체를 가져와서 저장할 변수
+		try{
+			//JNDI 연결을 위한 설정(대부분의 API는 javax.naming 패키지에 위치함)
+			//context.xml 파일 내의 <Context> 태그 항목 가져오기
+			Context initCtx = new InitialContext();
+
+			//context.xml 파일 내의 <context> 태그 내에서 <Reswource> 태그 항목 가져오기
+			//Context 객체의 lookup()메서드를 호출하여 "java:comp/env" 문자열 전달
+			Context envCtx = (Context)initCtx.lookup("java:comp/env");
+
+			//context.xml 파일 내의 <Resource> 태그 내에서 JNDI 설정을 위한 이름(name) 가져오기
+			//=>리턴타입이 Object 타입이므로 DataSource 타입으로 다운캐스팅 필요
+			DataSource ds = (DataSource)envCtx.lookup("jdbc/MySQL");
+
+			//DataSource 객체의 getConnection()메서드를 호출하여 connection객체 가져오기
+			con = ds.getConnection();
+			//=>ds.getConnection(username, password)형식으로도 사용할 수 있다
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+			return con;
+	}
+	//2. Connection, PreparedStatement, ResultSet 객체 반환하는 close() 메서드
+	//=>메서드 오버로딩 활용
+	//=>파라미터 : 각각의 객체, 리턴타입 : void
+	public static void close(Connection con){
+			try {
+				con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+	}
+}

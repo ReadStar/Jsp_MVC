@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<!-- DBCP(DataBase Connection Pool)설정 
+-서버에 공유할 커넥션 풀을 위한 리소스 정의
+-Resource 태그 내에 커넥션 풀에 필요한 리소스들을 속성="값" 형태로 정의
+  name="공유할 리소스 이름"
+  auth="인증 대상"
+  type="공유할 리소스 데이터 타입"
+  
+-->
+	<Resource
+			name="jdbc/MySQL"
+			auth="Container"
+			type="javax.sql.DataSource"
+			username="root"
+			password="63520321"/>
+
+</Context>

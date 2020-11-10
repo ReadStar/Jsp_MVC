@@ -1,0 +1,9 @@
+package dao;
+
+public class BoardDAO {
+	/*
+	 * 싱글톤 디자인 패턴을 활용한 BoardDAO 인스턴스 작업
+	 * 
+	 */
+	
+}

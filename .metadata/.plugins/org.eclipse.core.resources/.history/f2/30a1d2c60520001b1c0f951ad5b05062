@@ -1,0 +1,6 @@
+package vo;
+
+public class ActionForward {
+	//포워딩 정보를 관리하는 클래스
+	//
+}

@@ -1,0 +1,10 @@
+package dao;
+
+public class BoardDAO {
+	/*
+	 * 싱글톤 디자인 패턴을 활용한 BoardDAO 인스턴스 작업
+	 * 1. 외부에서 생성자 호출이 불가능 하도록 생성자를 private 으로 선언
+	 *  
+	 */
+	
+}

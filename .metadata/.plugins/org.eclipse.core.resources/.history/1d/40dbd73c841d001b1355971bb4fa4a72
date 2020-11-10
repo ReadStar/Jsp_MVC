@@ -1,0 +1,21 @@
+<%@page import="javax.naming.InitialContext"%>
+<%@page import="javax.naming.Context"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+//DBCP 사용을 위한 테스트
+Connection con = null;
+
+try{
+//JNDI 연결을 위한 설정(대부분의 API는 javax.naming 패키지에 위치함)
+//context.xml 파일 내의 <Context> 태그 항목 가져오기
+Context initCtx = new InitialContext();
+
+//context.xml 파일 내의 <context> 태그 내에서 <Reswource> 태그 항목 가져오기
+//Context 객체의 lookup()메서드를 호출하여 "java:comp/env" 문자열 전달
+Context envCtx = (Context)initCtx.lookup("java:comp/env");
+}catch(Exception e){
+	out.println("<h1>DBCP 연결 실패</h1>");
+}
+%>

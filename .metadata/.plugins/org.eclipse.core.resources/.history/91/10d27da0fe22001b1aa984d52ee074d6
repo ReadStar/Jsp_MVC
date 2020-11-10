@@ -1,0 +1,54 @@
+package action;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.oreilly.servlet.MultipartRequest;
+
+import vo.ActionForward;
+
+public class BoardWriteProAction implements Action {
+
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		System.out.println("BoardWriteProAction!");
+		//MultiPartRequest 객체를 가져와서
+		//전달받은 파라미터(글쓴이, 비밀번호, 글제목, 내용, 작성자, 작성일)가져오기
+		
+		//현재 컨텍스트(객체) 정보 가져오기 위해 
+		//request 객체의 getServletContext() 메서드를 호출
+		ServletContext context = request.getServletContext();
+		//프로젝트 상에서 설정한 가상 업로드 폴더 경로 지정
+		//현재 루트 위치가 Webcontent 폴더이므로 하위 폴더인 boardUpload 지정
+		String saveFolder = "/boardUpload";
+		//가상 폴더에 대응하는 실제 폴더 위치를 가져오기 위해
+		//ServletContext 객체의 getRealPath() 메서드를 호출
+		//=>파라미터 : 가상 업로드 폴더 경로
+		String realFolder = context.getRealPath(saveFolder);
+		System.out.println("실제 업로드 폴더 :" + realFolder);
+		//실제업로드 폴더 구조 : 워크프세이스/.metadata/.plugins/org.elipse.wet.server.core/tmp0/
+		//실제 업로드 폴더 :/Users/enril/Desktop/Java/Jsp_Model2/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/MVC_Board/boardUpload
+		
+		//업로드 할 최대 파일 크기 지정(Byte 단위)
+		//ex) 1MBte = 1024KByte = 1,048,576Byte 직접적인 크기를 명시하지 않도록 한다
+//		int fileSize = 1048576;
+//		int fileSize = 1024 * 1024;
+		int fileSize = 1024 * 1024 * 10;
+		
+		//뷰페이지(JSP) 에서 전달된 파라미터들이
+		//enctype="multipart/form-data" 타입으로 전달될 경우
+		//일반 request 객체가 아닌 MultipartRequest 객체를 통해 전달받아야 하므로
+		//MultipartRequest 객체 생성 필수
+//		MultipartRequest multi = new MultipartRequest(
+//				request, //HttpServletRequest(request)객체 
+//				arg1, 
+//				arg2, 
+//				arg3, 
+//				arg4
+//				);
+		
+		return null;
+	}
+
+}

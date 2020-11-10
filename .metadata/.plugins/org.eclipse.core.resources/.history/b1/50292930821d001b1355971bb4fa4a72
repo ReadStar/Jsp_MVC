@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<!-- DBCP(DataBase Connection Pool)설정 
+-서버에 공유할 커넥션 풀을 위한 리소스 정의
+-Resource 태그 내에 커넥션 풀에 필요한 리소스들을 속성="값" 형태로 정의
+  name="공유할 리소스 이름"
+  auth="인증 대상"
+  type="공유할 리소스 데이터 타입"
+  username="연결 DB 계정명"
+  password="연결 DB 패스워드"
+  drviverClassName="드라이버 클래스 위치 및 클래스명"
+  factory="DataSource 객체 생성 담당 클래스 지정"
+  
+-->
+	<Resource
+			name="jdbc/MySQL"
+			auth="Container"
+			type="javax.sql.DataSource"
+			username="root"
+			password="63520321"
+			driverClassName="com.mysql.jdbc.Driver"
+			factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+			url=""
+			maxActive=""
+			maxIdle=""/>
+
+</Context>
