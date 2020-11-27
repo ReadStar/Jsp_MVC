@@ -1,0 +1,15 @@
+package svc;
+
+import vo.MemberBean;
+
+public class MemberJoinProService {
+
+	public boolean registMember(MemberBean member) {
+		boolean isJoinSuccess = false;
+		
+		Connection con = getConnection();
+		
+		return false;
+	}
+
+}

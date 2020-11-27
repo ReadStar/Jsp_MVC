@@ -1,0 +1,23 @@
+package svc;
+
+import static db.JdbcUtil.getConnection;
+
+import java.sql.Connection;
+
+import dao.BoardDAO;
+import vo.BoardBean;
+
+public class BoardReplyProService {
+
+	public static boolean replyArticle(BoardBean article) {
+		boolean isReplySuccess = false;
+		
+		// 1(공통). Connection 객체 가져오기
+		Connection con = getConnection();
+		// 2(공통). BoardDAO 객체 가져오기
+		BoardDAO boardDAO = BoardDAO.getInstance();
+		
+		return false;
+	}
+
+}

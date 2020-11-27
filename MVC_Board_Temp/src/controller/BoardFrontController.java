@@ -42,7 +42,7 @@ public class BoardFrontController extends HttpServlet{
 			//Action 클래스의 execute() 메서드를 호출하여 글목록 가져오기 수행
 			ActionForward forward = action.execute(request, response);
 			//ActionFroward 객체의 isRedirect()가 false이면
-			//Dispatcher 방식으로 포워딩
+			//Dispatcher 방식으로 포워딩-
 			if(!forward.isRedirect()) {
 				//request 객체의 getRequestDispatcher() 메서드를 호출하여
 				//RequestDispatcher 객체 가져오기(파라미터 :포워딩 경로)

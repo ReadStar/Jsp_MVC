@@ -1,0 +1,31 @@
+package action;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import vo.ActionForward;
+import vo.BoardBean;
+
+public class BoardReplyProAction implements Action {
+
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		/*
+		 * 답변글 작성 요청하기
+		 * -전달받은 파라미터(답글 작성에 필요한 모든 파라미터) 가져오기
+		 * 	  => BoardBean객체에 저장
+		 * -BoardReplyProService 클래스의 replyArticle() 메서드를 호출하여 답변글 작성 요청
+		 * 	 =>파라미터 : BoardBean, 리턴타입 : boolean(isPeplySuccess)
+		 * 
+		 */
+		System.out.println("BoardReplyProACtion");
+		ActionForward forward = null;
+		
+		BoardBean article = new BoardBean();
+		
+		article.setBoard_num(Integer.parseInt(request.getParameter("board_num");
+		
+		return forward;
+	}
+
+}

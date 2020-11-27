@@ -1,9 +1,0 @@
-package vo;
-
-public class ActionForward {
-
-	public static void main(String[] args) {
-		
-	}
-
-}

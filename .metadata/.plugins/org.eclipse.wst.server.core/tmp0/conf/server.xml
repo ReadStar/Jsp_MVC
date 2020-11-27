@@ -172,7 +172,7 @@
    maxActive="최대 동시 대여 가능한 커넥션 갯수"
    maxIdle="최대 보유 가능한 유휴 커넥션 갯수"
 -->
-	<Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory" maxActive="500" maxIdle="20" name="jdbc/MySQL" password="63520321" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/jsp_model2_1?serverTimezone=UTC" username="root"/>
+	<Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory" maxActive="500" maxIdle="20" name="jdbc/MySQL" password="63520321" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/jsp_model2_1?useSSL=false&amp;serverTimezone=UTC" username="root"/>
 
 </Context></Host>
     </Engine>

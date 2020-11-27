@@ -123,13 +123,13 @@ public class BoardWriteProAction implements Action {
 			out.println("history.back()");// 이전 페이지로 이동
 			out.println("</script>"); //자바스크립트 끝 태그
 		}else {
-		//1. ActionForward객체 생성
-		forward = new ActionForward();
-		//2. 포워딩 경로(URL) 지정
-		// 		경로 앞에 /기호 붙이지 말 것
-		forward.setPath("BoardList.bo");
-		//3. 포워딩 방식 (Redirect 방식)지정
-		forward.setRedirect(true);
+			//1. ActionForward객체 생성
+			forward = new ActionForward();
+			//2. 포워딩 경로(URL) 지정
+			// 		경로 앞에 /기호 붙이지 말 것
+			forward.setPath("BoardList.bo");
+			//3. 포워딩 방식 (Redirect 방식)지정
+			forward.setRedirect(true);
 		}
 		//4. ActionForward 객체 리턴 => BoardFrontController 클래스로 전달
 		return forward;

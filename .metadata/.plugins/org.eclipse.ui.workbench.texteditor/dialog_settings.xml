@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Web"/>
+		<item key="selection" value="//"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="forward = action.execute(request, response);"/>
+			<item value="board"/>
+			<item value="// 1(공통). Connection 객체 가져오기&#x0A;&#x09;&#x09;Connection con = getConnection();&#x0A;&#x09;&#x09;&#x0A;&#x09;&#x09;// 2(공통). BoardDAO 객체 가져오기&#x0A;&#x09;&#x09;BoardDAO boardDAO = BoardDAO.getInstance();&#x0A;&#x09;&#x09;&#x0A;&#x09;&#x09;// 3(공통). BoardDAO 객체에 Connection 객체 전달&#x0A;&#x09;&#x09;boardDAO.setConnection(con);&#x0A;&#x09;&#x09;&#x0A;&#x09;&#x09;// 4. BoardDAO 클래스의 isArticleBoardWriter() 메서드를 호출하여&#x0A;&#x09;&#x09;//    적합한 사용자인지 판별&#x0A;&#x09;&#x09;//    =&gt; 파라미터 : 글번호, 패스워드, 리턴타입 : boolean(isArticleWriter)&#x0A;&#x09;&#x09;isArticleWriter = boardDAO.isArticleBoardWriter(board_num, board_pass);&#x0A;&#x09;&#x09;&#x0A;&#x09;&#x09;// 5(공통). Connection 객체 반환하기&#x0A;&#x09;&#x09;close(con);&#x0A;&#x09;&#x09;&#x0A;&#x09;&#x09;// 6. 결과 리턴"/>
+			<item value="//"/>
 			<item value="web"/>
 		</list>
 		<list key="replacehistory">

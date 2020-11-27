@@ -1,0 +1,10 @@
+package vo;
+
+public class MemberBean {
+	private String name;
+	private String id;
+	private String passwd;
+	private int age;
+	private String email;
+	private String gender;
+}

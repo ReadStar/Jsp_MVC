@@ -1,0 +1,9 @@
+package action;
+
+public class memberLoginProService {
+	public boolean isLoginMember(String id, String apsswd) {
+		boolean isMember = false;
+		
+		return isMember;
+	}
+}

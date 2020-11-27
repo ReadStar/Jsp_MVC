@@ -26,7 +26,7 @@
 			password="63520321"
 			driverClassName="com.mysql.jdbc.Driver"
 			factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
-			url="jdbc:mysql://localhost:3306/jsp_model2_1?serverTimezone=UTC"
+			url="jdbc:mysql://localhost:3306/jsp_model2_1?useSSL=false&amp;serverTimezone=UTC"
 			maxActive="500"
 			maxIdle="20"/>
 

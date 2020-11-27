@@ -1,0 +1,94 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.swing.text.html.HTMLDocument.HTMLReader.PreAction;
+
+import vo.MemberBean;
+
+import static db.JdbcUtil.*;
+
+public class MemberDAO {
+	// ------------------- 싱글톤 패턴 -------------------
+	private static MemberDAO instance = new MemberDAO();
+	
+	private MemberDAO() {}
+
+	public static MemberDAO getInstance() {
+		return instance;
+	}
+	// ---------------------------------------------------
+	
+	Connection con = null;
+
+	public void setConnection(Connection con) {
+		this.con = con;
+	}
+
+	// 회원 추가
+	public int insertMember(MemberBean member) {
+		int insertCount = 0;
+		
+		PreparedStatement pstmt = null;
+		
+		try {
+			// 전달받은 회원가입정보(MemberBean)를 사용하여
+			// member 테이블에 레코드 추가
+			String sql = "INSERT INTO member VALUES (?,?,?,?,?,?)";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, member.getName());
+			pstmt.setString(2, member.getId());
+			pstmt.setString(3, member.getPasswd());
+			pstmt.setInt(4, member.getAge());
+			pstmt.setString(5, member.getEmail());
+			pstmt.setString(6, member.getGender() + ""); // char -> String 변환 필요
+			
+			insertCount = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			System.out.println("insertMember() 오류! - " + e.getMessage());
+			e.printStackTrace();
+		} finally {
+			close(pstmt);
+		}
+		
+		return insertCount;
+	}
+
+	//로그인
+	public boolean selectLoginMember(String id, String passwd) {
+		boolean isMember = false;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		//아이디에 해당하는 패스워드 검색
+		//1-1. 조회 성공 시 존재하는 아이디이므로 패스워드 판별 가능
+		//		=>조회 결과에서 패드워드를 다시 판별
+		//1-2. 아이디 존재 시 패스워드 일치 여부 판별
+		//		=>패스워드 일치할 경우 "로그인 성공" 출력
+		//		=>패스워드가 일치하지 않을 경우 "패스워드 틀림" 출력
+		//2. 조회 실패 시 존재하지 않는 아이디이므로 "아이디 없음"출력
+		
+		String sql = "SELECT passwd FROM member WHERE id=?"
+		
+		return false;
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

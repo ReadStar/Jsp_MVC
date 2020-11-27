@@ -1,0 +1,13 @@
+package svc;
+
+import vo.BoardBean;
+
+public class BoardReplyProService {
+
+	public static boolean replyArticle(BoardBean article) {
+		boolean isReplySuccess = false;
+		
+		return false;
+	}
+
+}

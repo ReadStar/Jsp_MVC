@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Context>
-<!-- DBCP(DataBase Connection Pool)설정 
--서버에 공유할 커넥션 풀을 위한 리소스 정의
--->
-	<Resource/>
-
-</Context>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;qna_board_write.jsp&apos; to &apos;board&apos;&#x0A;- Original project: &apos;MVC_Board&apos;&#x0A;- Destination element: &apos;board&apos;&#x0A;- Original element: &apos;qna_board_write.jsp&apos;" description="Copy file" element1="WebContent/board/qna_board_write.jsp" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1605506958925" target="/MVC_Board/WebContent/board" units="0" version="1.0"/>
+</session>

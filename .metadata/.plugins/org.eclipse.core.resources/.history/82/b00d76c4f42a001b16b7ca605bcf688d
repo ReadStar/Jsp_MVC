@@ -1,0 +1,32 @@
+package svc;
+
+import static db.JdbcUtil.close;
+import static db.JdbcUtil.getConnection;
+
+import java.sql.Connection;
+
+import dao.BoardDAO;
+import vo.BoardBean;
+
+public class BoardReplyProService {
+
+	public boolean replyArticle(BoardBean article) {
+		boolean isReplySuccess = false;
+		
+		// 1(공통). Connection 객체 가져오기
+		Connection con = getConnection();
+		// 2(공통). BoardDAO 객체 가져오기
+		BoardDAO boardDAO = BoardDAO.getInstance();
+		// 3(공통). BoardDAO 객체에 Connection 객체 전달
+		boardDAO.setConnection(con);
+		// 4. BoardDAO 클래스의 insertReplyArticle() 메서드를 호출하여
+		//    적합한 사용자인지 판별
+		//    => 파라미터 : BoardBean, 리턴타입 : boolean(isArticleWriter)
+		
+		// 5(공통). Connection 객체 반환하기
+		close(con);
+		// 6. 결과 리턴
+		return isReplySuccess;
+	}
+
+}

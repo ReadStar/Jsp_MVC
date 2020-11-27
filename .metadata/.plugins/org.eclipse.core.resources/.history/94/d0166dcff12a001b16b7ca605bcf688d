@@ -1,0 +1,19 @@
+package svc;
+
+import java.sql.Connection;
+
+import dao.BoardDAO;
+import vo.BoardBean;
+
+public class BoardReplyProService {
+
+	public static boolean replyArticle(BoardBean article) {
+		boolean isReplySuccess = false;
+		
+		Connection con = getConnection();
+		
+		BoardDAO boardDAO = BoardDAO.getInstance()
+		return false;
+	}
+
+}

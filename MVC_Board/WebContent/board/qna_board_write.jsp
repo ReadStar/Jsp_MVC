@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%
+	// session 객체에 저장된 id 값 가져와서 변수에 저장
+	String id = (String)session.getAttribute("id");
+    %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +39,26 @@ table{
 #commandCell{
 	text-align: center;
 }
+
+	#login {
+		text-align: right;
+	}
 </style>
+
+	<section id="login">
+		<!-- 
+			세션에서 가져온 id 값이 존재하지 않을 경우 
+			로그인(MemberLoginForm.me), 회원가입(MemberJoinForm.me) 링크 
+		-->
+		<%
+		if(id == null) { 
+		%>
+			<a href="MemberLoginForm.me">로그인</a> | <a href="MemberJoinForm.me">회원가입</a>
+		<%} else { %>
+		<!-- 세션에서 가져온 id 값이 존재할 경우 아이디 표시 및 로그아웃(MemberLogout.me) 링크 -->
+			<%=id %>님 | <a href="MemberLogout.me">로그아웃</a>
+		<%} %>
+	</section>
 </head>
 <body>
 	<!-- 게시판 등록-->

@@ -1,4 +1,6 @@
 INDEX VERSION 1.131
+/Users/enril/Desktop/Java/Jsp_Model2/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/952422833.index
+/MVC_Board/src
 /Users/enril/Desktop/Java/Jsp_Model2/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1348596512.index
 /MVC_Board_Temp/src
 /Users/enril/Desktop/Java/Jsp_Model2/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3393956320.index

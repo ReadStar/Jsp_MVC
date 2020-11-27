@@ -3,8 +3,17 @@ package svc;
 import java.sql.Connection;
 
 import dao.BoardDAO;
-import db.JdbcUtil;
 import vo.BoardBean;
+
+//import db.JdbcUtil;
+//=>JdbcUtil클래스의 static 메서드들을 좀 더 쉽게 호출하기 위해
+//		static import 기능을 활용할 수 있음
+//		=>import static 패키지명.클래스명.static메서드명;
+//import static db.JdbcUtil.getConnection;
+//=>static import로 선언된 메서드는 클래스명을 붙일 수 없다
+//=>모든 static 메서드를 등록하기 위해서는 메서드명 대신 만능문자(*)사용
+import static db.JdbcUtil.*;
+//=>db.JdbcUtil 클래스의 모든 static메서드가 import 됨
 
 //Action 클래스로부터 요청받은 작업에 대한 데이터 등을 전달받아
 //Model(DAO 클래스)을 통해 실제 작업 처리를 요청하고
@@ -21,7 +30,7 @@ public class BoardWriteProService {
 		
 		//DB작업을 위한 비즈니스 로직 수행 준비
 		//1(공통).DB 작업에 필요한 Connection 객체 가져오기
-		Connection con = JdbcUtil.getConnection();
+		Connection con = getConnection();
 		//2(공통).DB 작업에 필요한 DAO 객체 가져오기
 		BoardDAO boardDAO = BoardDAO.getInstance();
 		//3.(공통).가져온 Connection 객체를 DAO 객체에 전달하기
@@ -32,13 +41,13 @@ public class BoardWriteProService {
 		//5.리턴받은 글 등록 결과를 판별
 		//=>0보다 클 경우 성공  commit, 0일 경우 실패 rollback 작업 수행
 		if(insertCount > 0) {
-			JdbcUtil.commit(con); //DB커밋 작업 수행
+			commit(con); //DB커밋 작업 수행
 			isWriteSuccess = true; //리턴할 작업 수행 결과를 true로 설정
 		}else if(insertCount == 0) {
-			JdbcUtil.rollback(con);
+			rollback(con);
 		}
 		//6(공통). 사용이 완료된 Connection 객체 반환하기
-		JdbcUtil.close(con);
+		close(con);
 		//7. 글 등록 성공 여부 리턴 =>BoardWriteProAction클래스로 전달
 		return isWriteSuccess;
 	}

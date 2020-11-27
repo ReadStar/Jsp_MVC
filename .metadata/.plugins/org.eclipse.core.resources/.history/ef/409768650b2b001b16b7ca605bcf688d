@@ -1,0 +1,40 @@
+package action;
+
+import java.io.PrintWriter;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import svc.BoardDeleteProService;
+import vo.ActionForward;
+
+public class BoardDeleteProAction implements Action {
+
+	@Override
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		System.out.println("BoardDeleteProAction");
+		
+		ActionForward forward = null;
+		
+		//전달 받은 게시물 번호와 패스워드를 사용하여 적합한 사용자인지 판별
+		int board_num = Integer.parseInt(request.getParameter("board_num"));
+		String board_pass = request.getParameter("board_pass");
+		System.out.println("글번호 : " + board_num);
+		
+		//BoardDeleteProService클래스의 emoveArticle()메서드를 호출하여 글 삭제 작업 요청
+		//=>파라미터 : 글번호, 패스워드 리턴타입 : boolena(isArticleWriter)
+		BoardDeleteProService boardDeleteProService = new BoardDeleteProService();
+		boolean isArticleWriter = boardDeleteProService.isArticleWriter(board_num, board_pass);
+		
+		//적합한 사용자 여부 판별
+		if(!isArticleWriter) { //패스워드 틀릴 경우
+			PrintWriter out = response.getWriter();
+			out.println("<script>");
+			out.println("alert('삭제권한이 없습니다')");
+			out.println("history.back()");
+		}
+		
+		return forward;
+	}
+
+}

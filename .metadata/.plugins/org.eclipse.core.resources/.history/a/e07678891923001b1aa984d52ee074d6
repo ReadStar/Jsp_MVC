@@ -1,8 +1,0 @@
-package db;
-
-//DB관련 기본 기능(연결, 자원반환, commit, rollback 등)을 담당하는 클래스
-public class JdbcUtil {
-	//1. DBCP를 활용한 Connection 객체를 가져오는 getConnection() 메서드 정의
-	//=>파라미터 : 없음, 리턴타입 : Connection
-	
-}

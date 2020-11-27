@@ -1,0 +1,16 @@
+package svc;
+
+import vo.BoardBean;
+
+public class BoardReplyProService {
+
+	public static boolean replyArticle(BoardBean article) {
+		boolean isReplySuccess = false;
+		
+		Connection con = getConnection();
+		
+		BoardDAO boardDAO = new BoardDAO();
+		return false;
+	}
+
+}
